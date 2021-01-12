@@ -14,7 +14,7 @@
  
 ## 下载安装依赖
 ```
-cd imcp-web
+cd lmcp-web
 npm install 或 yarn
 ```
 
