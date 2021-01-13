@@ -18,7 +18,6 @@ if (process.env.NODE_ENV == 'development') {
 
 // 创建一个axios实例
 const request = axios.create({
-    baseURL: 'http://localhost:8080',
     headers: {
         'content-type': 'application/json;charset=UTF-8',
         'responseType': 'json', // 默认的
@@ -61,7 +60,8 @@ request.interceptors.response.use(response => {
         }
     }
 }, error => {
-    return Promise.reject(error.response); // 返回接口返回的错误信息
+    MessageBox.alert(error.message, '通知', {type: 'error'})
+    // return Promise.reject(error.response); // 返回接口返回的错误信息
 })
 
 /**

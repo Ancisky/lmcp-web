@@ -22,7 +22,7 @@ npm install 或 yarn
 ```
 npm run serve
 ```
-运行之后，访问地址：http://localhost:8081
+运行之后，访问地址：http://localhost:80
 
 ## 生产环境打包
 ```
@@ -30,13 +30,13 @@ npm run build
 ```
 
 
-[在线效果演示](https://127.0.0.1:8081/)
+[在线效果演示](https://127.0.0.1:80/)
 
 # 效果截图
 
 ## 登录界面
 
-<img src="https://github.com/jackchen0120/vueDataV/blob/master/public/img/login_0.png" width="900" alt="登录界面" />
+<img src="https://github.com/.." width="200" alt="主页" />
 
 # 项目架构
 ```
@@ -47,6 +47,7 @@ npm run build
 └─src
     │  App.vue                       // 根组件
     │  main.js                       // 程序入口文件
+    │  web.conf.js                   // 项目(服务)配置文件
     ├─assets
     │  ├─iconfont                     // 引用阿里巴巴矢量图标库   
     │  ├─img                          // 存放公共图片文件夹      
@@ -94,6 +95,8 @@ npm run build
     │  │      index.vue               // 自定义消息提示框模板
     │  └─waterPolo
     │          index.vue              // 水球图、水波图   
+    ├─api
+    │      request.js                 // 请求注册组件
     ├─router
     │      index.js                   // 单页面路由注册组件
     ├─store
@@ -102,6 +105,7 @@ npm run build
             Brand.vue                 // 公司品牌介绍
             Home.vue                  // 酷屏首页统计图
             Login.vue                 // 登录界面
+            datav.vue                 // datav大屏模板
 ```
 
  
@@ -125,3 +129,4 @@ npm run build
  * css3
  * jquery
  * iconfont
+ * datav
