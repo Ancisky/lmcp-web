@@ -22,6 +22,7 @@ import '@/assets/scss/style.scss'
 // 引入vue-awesome
 import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/index.js'
+import qs from "qs"
 
 Vue.use(vueParticles)
 Vue.use(Vcomp)
@@ -36,6 +37,7 @@ Vue.config.productionTip = false
 Vue.prototype.$Toast = Toast
 Vue.prototype.$get = get
 Vue.prototype.$post = post
+Vue.prototype.$qs = qs
 
 
 router.beforeEach((to, from, next) => {

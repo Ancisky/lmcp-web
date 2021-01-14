@@ -173,7 +173,7 @@
         },
         methods: {
             onSubmit() {
-                this.$get("/data/entry", {form: this.form})
+                this.$post("/data/entry", this.form)
                 console.log('submit!')
             }
         }
