@@ -18,10 +18,10 @@ if (process.env.NODE_ENV == 'development') {
 
 // 创建一个axios实例
 const request = axios.create({
-    baseURL: 'http://localhost:8080',
     headers: {
         'content-type': 'application/json;charset=UTF-8',
         'responseType': 'json', // 默认的
+        'X-Requested-With': 'XMLHttpRequest',
     },
     transformRequest: [function (data) {
         // 对 data 进行任意转换处理
@@ -93,7 +93,7 @@ export var get = function (url, params, headers = {}) {
 export var post = function (url, params, headers={}) {
     // eslint-disable-next-line no-unused-vars
     return new Promise((resolve, reject) => {
-        request.post(url, params, headers)
+        request.post(url, params, {headers: headers})
             .then(data => {
                 resolve(data);
             })

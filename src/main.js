@@ -12,6 +12,7 @@ import axios from 'axios'
 import dataV from '@jiaminghi/data-view'
 import echarts from 'echarts'
 import {get,post} from "@/api/request";
+import ElementUI from 'element-ui';
 
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/styles/base.scss'
@@ -27,6 +28,7 @@ Vue.use(Vcomp)
 Vue.use(VueAxios, axios)
 Vue.use(dataV)
 Vue.use(echarts)
+Vue.use(ElementUI);
 
 Vue.component('icon', Icon)
 

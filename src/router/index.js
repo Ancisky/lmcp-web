@@ -39,6 +39,14 @@ const routes = [
     meta: {
       title: 'datav模板'
     }
+  },
+  {
+    path: '/dataentry',
+    name: 'dataentry',
+    component: () => import('@/views/MetalDataEntry/index.vue'),
+    meta: {
+      title: '合金表单录入'
+    }
   }
 ]
 
