@@ -53,7 +53,7 @@ request.interceptors.response.use(response => {
         return Promise.reject(response.message || 'error')
     } else{
         let data = JSON.parse(response.data)
-        if(data.no < -1){
+        if(data.no!=null && data.no < -1){
             MessageBox.alert(data.msg, '通知', {type: 'error'})
             return Promise.reject("异常拦截终止"); // 返回接口返回的错误信息
         }else{

@@ -47,6 +47,22 @@ const routes = [
     meta: {
       title: '合金表单录入'
     }
+  },
+  {
+    path: '/visualization-neo',
+    name: 'visualization-neo',
+    component: () => import('@/views/visualization/graph3D-neo.vue'),
+    meta: {
+      title: '图数据可视化'
+    }
+  },
+  {
+    path: '/visualization',
+    name: 'visualization',
+    component: () => import('@/views/visualization/graph3D.vue'),
+    meta: {
+      title: '图数据可视化'
+    }
   }
 ]
 
