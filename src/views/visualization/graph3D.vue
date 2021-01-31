@@ -74,7 +74,7 @@ export default {
     show() {
       const links = []
       const ids  = new Set()
-      this.$get("http://127.0.0.1:8000/gv/")
+      this.$get("/../ebsd/gv/")
       .then(data=>{
         for(let key in data) {//
           let keyArray = key.replace('[','').replace(']','').replace(/\'/g,"").replace(/\"/g,"").trim().replace(/ /g,'').split(',')

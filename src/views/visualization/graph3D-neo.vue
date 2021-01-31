@@ -57,9 +57,9 @@ export default {
       },
       db:{
          // uri : "bolt://111.230.233.89",
-         uri : "bolt://localhost",
-         user : "neo4j",
-         password : "123456"
+         uri : this.$conf.neo4j.url,
+         user : this.$conf.neo4j.username,
+         password : this.$conf.neo4j.password
       },
 
   }},
