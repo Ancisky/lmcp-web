@@ -9,7 +9,7 @@ export default {
   mounted() {
     this.initDB()
     this.myGraph = ForceGraph3D(this.configOptions) (this.$refs.graph)
-        .backgroundColor('#000000')
+        .backgroundColor('white')
         // .width(2000 )
         // .height(1000)
         // 节点配置
@@ -32,7 +32,7 @@ export default {
         .nodeVal(node =>  node.size*0.05)
 
         .linkLabel(r => r.type)
-        .linkVisibility(false)
+        .linkVisibility(true)
         // 边的方向箭头
         // .linkDirectionalArrowLength(3.5)
         .linkDirectionalArrowRelPos(1)
@@ -42,8 +42,8 @@ export default {
         .linkDirectionalParticleSpeed(r => r.boundLength * 0.01)
         .linkDirectionalParticleWidth(0.3)
         // 变颜色和透明度
-        .linkColor(()=>'RGB(170,170,170)')
-        // .linkAutoColorBy(r => r.type)
+        // .linkColor(()=>'RGB(170,170,170)')
+        .linkAutoColorBy(r => r.type)
         // .linkOpacity(0.3)  // 边透明度，越小越透明
         // .dagLevelDistance(10000000)
 
