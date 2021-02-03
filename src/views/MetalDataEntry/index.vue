@@ -144,36 +144,38 @@
 
 
 <script>
-    import qs from "qs"
+    // import qs from "qs"
     export default {
 
         data() {
             return {
                 form: {
-                    id: '',
-                    Mg: '',
-                    Al: '',
-                    Fe: '',
-                    Co: '',
-                    Ni: '',
-                    Cu: '',
-                    Zn: '',
-                    Ga: '',
-                    Ag: '',
-                    In: '',
-                    Sn: '',
-                    Bi: '',
-                    c:'',
-                    hb:'',
-                    p:'',
-                    k:'',
-                    v:'',
+                    id: null,
+                    Mg: null,
+                    Al: null,
+                    Fe: null,
+                    Co: null,
+                    Ni: null,
+                    Cu: null,
+                    Zn: null,
+                    Ga: null,
+                    Ag: null,
+                    In: null,
+                    Sn: null,
+                    Bi: null,
+                    c : null,
+                    hb : null,
+                    p : null,
+                    k : null,
+                    v : null,
                 }
             }
         },
         methods: {
             onSubmit() {
-                this.$post("/data/entry", this.form)
+                this.$post("/data/entry", this.form).then(function(res){  // {"no":1,"msg":"录入成功！","data":null}
+                    this.$confirm(res.msg)
+                }.bind(this));
                 console.log('submit!')
             }
         }
@@ -182,7 +184,7 @@
 
 <style scoped>
 
-    .el-form-item{
+    .el-form-item {
         margin-left: 0px !important;
     }
 

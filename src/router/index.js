@@ -47,6 +47,14 @@ const routes = [
     meta: {
       title: '合金表单录入'
     }
+  },
+  {
+    path: '/calculate',
+    name: 'calculate',
+    component: () => import('@/views/calculate/index.vue'),
+    meta: {
+      title: '液态金属性能预测'
+    }
   }
 ]
 
