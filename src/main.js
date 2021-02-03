@@ -23,8 +23,6 @@ import '@/assets/scss/style.scss'
 import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/index.js'
 import qs from "qs"
-//import echarts from 'echarts'
-
 
 Vue.use(vueParticles)
 Vue.use(Vcomp)
@@ -40,7 +38,6 @@ Vue.prototype.$Toast = Toast
 Vue.prototype.$get = get
 Vue.prototype.$post = post
 Vue.prototype.$qs = qs
-Vue.prototype.$echarts = echarts
 
 
 router.beforeEach((to, from, next) => {

@@ -3,7 +3,8 @@ module.exports = {
   productionSourceMap: false,
   lintOnSave: false,
   devServer: {
-    port: 80,
+    port: 7070,
+    disableHostCheck: true,
     // proxy: {
     //   "/api": {
     //     target: "https://api.github.com",
