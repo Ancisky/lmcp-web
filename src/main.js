@@ -13,6 +13,7 @@ import dataV from '@jiaminghi/data-view'
 import echarts from 'echarts'
 import {get,post} from "@/api/request";
 import ElementUI from 'element-ui';
+import conf from '@/web.conf'
 
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/styles/base.scss'
@@ -38,6 +39,8 @@ Vue.prototype.$Toast = Toast
 Vue.prototype.$get = get
 Vue.prototype.$post = post
 Vue.prototype.$qs = qs
+Vue.prototype.$conf = conf
+Vue.prototype.$echarts = echarts
 
 
 router.beforeEach((to, from, next) => {
