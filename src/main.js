@@ -14,6 +14,7 @@ import echarts from 'echarts'
 import {get,post} from "@/api/request";
 import ElementUI from 'element-ui';
 import conf from '@/web.conf'
+import qs from "qs"
 
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/styles/base.scss'
@@ -23,7 +24,6 @@ import '@/assets/scss/style.scss'
 // 引入vue-awesome
 import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/index.js'
-import qs from "qs"
 
 Vue.use(vueParticles)
 Vue.use(Vcomp)
@@ -39,8 +39,8 @@ Vue.prototype.$Toast = Toast
 Vue.prototype.$get = get
 Vue.prototype.$post = post
 Vue.prototype.$qs = qs
-Vue.prototype.$conf = conf
 Vue.prototype.$echarts = echarts
+Vue.prototype.$conf = conf
 
 
 router.beforeEach((to, from, next) => {
@@ -51,7 +51,7 @@ router.beforeEach((to, from, next) => {
 })
 
 new Vue({
-  router,
-  store,
-  render: h => h(App),
+	router,
+	store,
+	render: h => h(App),
 }).$mount('#app')

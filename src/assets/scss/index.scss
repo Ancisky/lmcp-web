@@ -9,9 +9,11 @@
 
   .bg {
     padding: 1rem;
-    background-image: url("../../assets/pageBg.png");
+    //background-image: url("../../assets/pageBg.png");
   }
-
+  .bg-black{
+    background-color: rgba(0,0,0,.86);
+  }
   .host-body {
     .title {
       position: relative;
@@ -97,12 +99,13 @@
       //下方区域的布局
       .content-box {
         display: grid;
-        grid-template-columns: 2fr 3fr 5fr 3fr 2fr;
+        //grid-template-columns: 2fr 3fr 5fr 3fr 2fr;
+        grid-template-columns: 2fr 6fr 5fr 2fr;
       }
 
       // 底部数据
       .bototm-box {
-        margin-top: 10px;
+        margin-top: 200px;
         display: grid;
         grid-template-columns: repeat(2, 50%);
       }

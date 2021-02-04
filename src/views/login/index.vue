@@ -83,7 +83,7 @@ export default {
   data() {
     return {
       userName: 'admin',
-      userPwd: '',
+      userPwd: '123',
       visible: false,
       modalContent: '这是一段自定义模态框消息'
     }

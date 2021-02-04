@@ -39,6 +39,13 @@ const routes = [
     meta: {
       title: 'datav模板'
     }
+  },{
+    path: '/datav-bc',
+    name: 'datav-bc',
+    component: () => import('@/views/datav-backup/index.vue'),
+    meta: {
+      title: 'datav模板'
+    }
   },
   {
     path: '/dataentry',
@@ -54,6 +61,30 @@ const routes = [
     component: () => import('@/views/calculate/index.vue'),
     meta: {
       title: '液态金属性能预测'
+    }
+  },
+  {
+    path: '/visualization-neo',
+    name: 'visualization-neo',
+    component: () => import('@/views/visualization/graph3D-neo.vue'),
+    meta: {
+      title: '图数据可视化'
+    }
+  },
+  {
+    path: '/visualization',
+    name: 'visualization',
+    component: () => import('@/views/visualization/graph3D.vue'),
+    meta: {
+      title: '图数据可视化'
+    }
+  },
+  {
+    path: '/dataTransmission',
+    name: 'dataTransmission',
+    component: () => import('@/components/dataTransmission/index.vue'),
+    meta: {
+      title: '图数据可视化'
     }
   }
 ]

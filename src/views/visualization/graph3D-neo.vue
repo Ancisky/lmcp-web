@@ -69,7 +69,6 @@ export default {
       const neo4j = require('neo4j-driver')
       const driver = neo4j.driver(this.db.uri, neo4j.auth.basic(this.db.user, this.db.password))
       const session = driver.session()
-      const personName = 'Alice'
       const result = await session.run(
           'MATCH (n)-[r]->(m) where n.grainID < $limit_grains ' +
           'RETURN id(n) as source, id(m) as target, ' +
