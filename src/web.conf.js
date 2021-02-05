@@ -8,7 +8,8 @@ const conf = {
     pro_base_url: 'http://localhost:8080/',
 
     neo4j:{
-        url: 'bolt://m88h0ixk7x.54http.tech:59811',
+        // url: 'bolt://m88h0ixk7x.54http.tech:59811',
+        url: 'bolt://111.230.233.89',
         username: 'neo4j',
         password: '123456'
     },

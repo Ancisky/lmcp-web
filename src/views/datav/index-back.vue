@@ -109,7 +109,7 @@
 <script>
 
 import centreLeft1 from "./centreLeft1";
-import index from "@/components/dataTransmission/index";
+import index from "@/components/dataTransmission";
 // import centreLeft2 from "./centreLeft2";
 import centreRight1 from "./centreRight1";
 import centreRight2 from "./centreRight2";

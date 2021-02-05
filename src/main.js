@@ -21,6 +21,8 @@ import '@/assets/styles/base.scss'
 import '@/assets/styles/common.scss'
 import '@/assets/iconfont/iconfont.css'
 import '@/assets/scss/style.scss'
+import '@/assets/scss/common.scss'
+
 // 引入vue-awesome
 import Icon from 'vue-awesome/components/Icon'
 import 'vue-awesome/icons/index.js'
@@ -41,6 +43,7 @@ Vue.prototype.$post = post
 Vue.prototype.$qs = qs
 Vue.prototype.$echarts = echarts
 Vue.prototype.$conf = conf
+Vue.prototype.back = function (){router.back()}
 
 
 router.beforeEach((to, from, next) => {

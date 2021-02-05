@@ -56,8 +56,7 @@ export default {
         rendererConfig:{ antialias: true, alpha: true }
       },
       db:{
-         // uri : "bolt://111.230.233.89",
-         uri : this.$conf.neo4j.url,
+         uri : "bolt://m88h0ixk7x.54http.tech:59811",
          user : this.$conf.neo4j.username,
          password : this.$conf.neo4j.password
       },
@@ -71,21 +70,22 @@ export default {
       const session = driver.session()
       const result = await session.run(
           'MATCH (n)-[r]->(m) where n.grainID < $limit_grains ' +
-          'RETURN id(n) as source, id(m) as target, ' +
-          'n.size as size, labels(n) as labels, ' +
-          'type(r) as type, r.boundLength as boundLength ' +
+          'RETURN ' +
+            'id(n) as source, n.size as n_size, labels(n) as n_labels, ' +
+            'id(m) as target, m.size as m_size, labels(m) as m_labels, ' +
+            'type(r) as type, r.boundLength as boundLength ' +
           'LIMIT $limit_items ',
           {limit_items: 10000, limit_grains:100000}
       )
-      const node_attr = {}
+      const node_attr = new Map()
       result.records.map(r => {
         node_attr[r.get('source').toString()] = {
-          size: r.get('size').toString(),
-          labels:  r.get('labels').toString()
+          size: r.get('n_size').toString(),
+          labels:  r.get('n_labels').toString()
         };
         node_attr[r.get('target').toString()] = {
-          size: r.get('size').toString(),
-          labels:  r.get('labels').toString()
+          size: r.get('m_size').toString(),
+          labels:  r.get('m_labels').toString()
         }
       });
 

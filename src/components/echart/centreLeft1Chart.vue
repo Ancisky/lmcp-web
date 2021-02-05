@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div id="centreLeft1Chart" style="width:260px; height: 220px;"></div>
+  <div class="width100 height100">
+    <div id="centreLeft1Chart"  class="width100 height100"></div>
   </div>
 </template>
 

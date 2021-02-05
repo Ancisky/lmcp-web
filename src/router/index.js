@@ -66,7 +66,7 @@ const routes = [
   {
     path: '/visualization-neo',
     name: 'visualization-neo',
-    component: () => import('@/views/visualization/graph3D-neo.vue'),
+    component: () => import('@/views/visualization/graph3D-ebsd.vue'),
     meta: {
       title: '图数据可视化'
     }
@@ -82,7 +82,7 @@ const routes = [
   {
     path: '/dataTransmission',
     name: 'dataTransmission',
-    component: () => import('@/components/dataTransmission/index.vue'),
+    component: () => import('@/components/dataTransmission'),
     meta: {
       title: '图数据可视化'
     }
