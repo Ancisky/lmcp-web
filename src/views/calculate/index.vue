@@ -1,135 +1,137 @@
 <template>
-    <el-col :span="14" :offset="5">
-        <el-row></el-row>
-        <el-row>
-            <h1 align="center">液态金属性能预测</h1>
-        </el-row>
-
-        <el-row :gutter="20">
-            <el-card shadow="always">
+    <div class="a">
+        <el-col :span="14" offset="5">
+                <el-row></el-row>
                 <el-row>
-                    <el-col>
-                        <h2 align="center">设置样品成分配比</h2>
-                    </el-col>
+                    <h1 align="center" style="color: white">液态金属性能预测</h1>
                 </el-row>
 
-                <el-col :span="21">
-                    <el-row :gutter="20">
-                        <el-form ref="form" :model="form" label-width="auto">
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_ga">
-                                    <template slot="prepend">Ga</template>
-                                </el-input>
-                            </div></el-col>
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_in">
-                                    <template slot="prepend">In</template>
-                                </el-input>
-                            </div></el-col>
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_al">
-                                    <template slot="prepend">Al</template>
-                                </el-input>
-                            </div></el-col>
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_fe">
-                                    <template slot="prepend">Fe</template>
-                                </el-input>
-                            </div></el-col>
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_co">
-                                    <template slot="prepend">Co</template>
-                                </el-input>
-                            </div></el-col>
-                            <el-col :span="4"><div>
-                                <el-input placeholder="请输入" v-model="form.v_ni">
-                                    <template slot="prepend">Ni</template>
-                                </el-input>
-                            </div></el-col>
-                        </el-form>
-                    </el-row>
+                <el-row :gutter="20">
+                    <el-card shadow="always" style="background: black">
+                        <el-row>
+                            <el-col>
+                                <h2 align="center" style="color: white">设置样品成分配比</h2>
+                            </el-col>
+                        </el-row>
 
-<!--                    <el-row> </el-row>-->
+                        <el-col :span="21">
+                            <el-row :gutter="20">
+                                <el-form ref="form" :model="form" label-width="auto">
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_ga">
+                                            <template slot="prepend">Ga</template>
+                                        </el-input>
+                                    </div></el-col>
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_in">
+                                            <template slot="prepend">In</template>
+                                        </el-input>
+                                    </div></el-col>
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_al">
+                                            <template slot="prepend">Al</template>
+                                        </el-input>
+                                    </div></el-col>
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_fe">
+                                            <template slot="prepend">Fe</template>
+                                        </el-input>
+                                    </div></el-col>
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_co">
+                                            <template slot="prepend">Co</template>
+                                        </el-input>
+                                    </div></el-col>
+                                    <el-col :span="4"><div>
+                                        <el-input placeholder="请输入" v-model="form.v_ni">
+                                            <template slot="prepend">Ni</template>
+                                        </el-input>
+                                    </div></el-col>
+                                </el-form>
+                            </el-row>
 
-                    <el-row :gutter="20">
-                        <el-col :span="4" :offset="0"><div>
-                            <el-input placeholder="请输入" v-model="form.v_cu">
-                                <template slot="prepend">Cu</template>
-                            </el-input>
-                        </div></el-col>
-                        <el-col :span="4"><div>
-                            <el-input placeholder="请输入" v-model="form.v_zn">
-                                <template slot="prepend">Zn</template>
-                            </el-input>
-                        </div></el-col>
-                        <el-col :span="4"><div>
-                            <el-input placeholder="请输入" v-model="form.v_mg">
-                                <template slot="prepend">Mg</template>
-                            </el-input>
-                        </div></el-col>
-                        <el-col :span="4"><div>
-                            <el-input placeholder="请输入" v-model="form.v_ag">
-                                <template slot="prepend">Ag</template>
-                            </el-input>
-                        </div></el-col>
-                        <el-col :span="4"><div>
-                            <el-input placeholder="请输入" v-model="form.v_bi">
-                                <template slot="prepend">Bi</template>
-                            </el-input>
-                        </div></el-col>
-                        <el-col :span="4"><div>
-                            <el-input placeholder="请输入" v-model="form.v_sn">
-                                <template slot="prepend">Sn</template>
-                            </el-input>
-                        </div></el-col>
-                    </el-row>
-                </el-col>
+        <!--                    <el-row> </el-row>-->
 
-                <el-col :span="2">
-                    <el-button type="primary" @click="onSubmit" style="width:100px;height: 130px">提交预测</el-button>
-                </el-col>
-            </el-card>
-        </el-row>
+                            <el-row :gutter="20">
+                                <el-col :span="4" :offset="0"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_cu">
+                                        <template slot="prepend">Cu</template>
+                                    </el-input>
+                                </div></el-col>
+                                <el-col :span="4"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_zn">
+                                        <template slot="prepend">Zn</template>
+                                    </el-input>
+                                </div></el-col>
+                                <el-col :span="4"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_mg">
+                                        <template slot="prepend">Mg</template>
+                                    </el-input>
+                                </div></el-col>
+                                <el-col :span="4"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_ag">
+                                        <template slot="prepend">Ag</template>
+                                    </el-input>
+                                </div></el-col>
+                                <el-col :span="4"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_bi">
+                                        <template slot="prepend">Bi</template>
+                                    </el-input>
+                                </div></el-col>
+                                <el-col :span="4"><div>
+                                    <el-input placeholder="请输入" v-model="form.v_sn">
+                                        <template slot="prepend">Sn</template>
+                                    </el-input>
+                                </div></el-col>
+                            </el-row>
+                        </el-col>
 
-        <el-row>
-            <h5 align="center">1.选择制备成分 -> 2.输入组分含量 -> 3.提交预测任务 -> 4.云端返回计算结果 </h5>
-        </el-row>
+                        <el-col :span="2">
+                            <el-button type="primary" @click="onSubmit" style="width:100px;height: 130px">提交预测</el-button>
+                        </el-col>
+                    </el-card>
+                </el-row>
 
-        <el-row :gutter="20">
-            <el-card shadow="always">
+                <el-row>
+                    <h5 align="center" style="color: white">1.选择制备成分 -> 2.输入组分含量 -> 3.提交预测任务 -> 4.云端返回计算结果 </h5>
+                </el-row>
 
-                <el-col :span="5">
-                    <el-button type="primary" style="width:100px;height: 220px">属<br>性<br>计<br>算<br>结<br>果</el-button>
-                </el-col>
+                <el-row :gutter="20">
+                    <el-card shadow="always" style="background: black">
 
-                <el-col :span="9" >
-                    <div class="Echarts">
-                        <div id="main" style="width: 300px;height:200px;"></div>
-                    </div>
-                </el-col>
+                        <el-col :span="5">
+                            <el-button type="primary" style="width:100px;height: 220px">属<br>性<br>计<br>算<br>结<br>果</el-button>
+                        </el-col>
 
-                <el-col :span="10" >
-                    <el-table :show-header="false"
-                            :data="tableData"
-                            style="width: 100%">
-                        <el-table-column
-                                prop="prop"
-                                label="属性"
-                                width="180">
-                        </el-table-column>
-                        <el-table-column
-                                prop="name"
-                                label="数值"
-                                width="180">
-                        </el-table-column>
-                    </el-table>
-                </el-col>
+                        <el-col :span="9" >
+                            <div class="Echarts">
+                                <div id="main" style="width: 300px;height:200px;"></div>
+                            </div>
+                        </el-col>
+
+                        <el-col :span="10" >
+                            <el-table :show-header="false"
+                                    :data="tableData"
+                                    style="width: 100%">
+                                <el-table-column
+                                        prop="prop"
+                                        label="属性"
+                                        width="180">
+                                </el-table-column>
+                                <el-table-column
+                                        prop="name"
+                                        label="数值"
+                                        width="180">
+                                </el-table-column>
+                            </el-table>
+                        </el-col>
 
 
-            </el-card>
-        </el-row>
+                    </el-card>
+                </el-row>
 
-    </el-col>
+            </el-col>
+    </div>
 </template>
 
 <script>
@@ -207,7 +209,6 @@
                             { name: '电导率(S/m)', max: 10},
                             { name: '热导率W/(m·k)', max: 50},
                             { name: '硬度(HB)', max: 50}
-
                         ]
                     },
                     series: [{
@@ -262,6 +263,12 @@
         border:1px solid;
         border-radius:3px;
         background: rgba(131, 185, 212, 0.87);
+    }
+
+    div.a{
+        width: 100%;
+        height: 10000px;
+        background: black;
     }
 
     .el-row {

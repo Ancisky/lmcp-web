@@ -1,34 +1,36 @@
 <template>
-    <div id="app">
+    <div class="app">
         <el-row :gutter="20">
             <el-col :span="12" :offset="6">
                     <el-container>
                         <el-header >
-                            <el-card shadow="always">
-                                <h1 align="center">液态金属成分数据录入平台</h1>
-                            </el-card>
+                            <dv-border-box-12>
+                                <br>
+                                <h1 align="center" style="color: white">液态金属成分数据录入平台</h1>
+                                <dv-decoration-5 class="line"  style="width:400px;height:20px;"/>
+                                <br>
+                            </dv-border-box-12>
                         </el-header>
 
                         <el-container>
-                            <el-card shadow="always">
+                            <el-card shadow="always" style="background: black" >
                             <el-aside width="150px">
                                 <el-col span="20" offset="1">
-                                    <h1>液态金属简介
-
+                                    <h1 style="color: white">液态金属简介
                                     </h1>
-                                    液态金属是指一种不定型金属，液态金属可看作由正离子流体和自由电子气组成的混合物。
-                                    液态金属也是一种不定型、可流动液体的金属。
-                                    液态金属成形过程及控制，液态金属充型过程的水力学特性及流动情况充型过程对铸件质量的影响很大可能造成的各种缺陷，
-                                    如冷隔、浇不足、夹杂、气孔、夹砂、粘砂等缺陷，都是在液态金属充型不利的情况下产生的。
-                                    正确地设计浇注系统使液态金属平稳而又合理地充满型腔，对保证铸件质量起着很重要的作用。
-                                    单质中只有水银是液态金属，镓、铷、铯是低熔点金属。
+                                    <br>
+                                    <p style="color: white">液态金属是指一种不定型金属，液态金属可看作由正离子流体和自由电子气组成的混合物。
+                                        液态金属也是一种不定型、可流动液体的金属。
+                                        液态金属成形过程及控制，液态金属充型过程的水力学特性及流动情况充型过程对铸件质量的影响很大可能造成的各种缺陷，
+                                        如冷隔、浇不足、夹杂、气孔、夹砂、粘砂等缺陷，都是在液态金属充型不利的情况下产生的。
+                                        正确地设计浇注系统使液态金属平稳而又合理地充满型腔，对保证铸件质量起着很重要的作用。
+                                        单质中只有水银是液态金属，镓、铷、铯是低熔点金属。</p>
                                 </el-col>
-
                             </el-aside>
                             </el-card>
 
                             <el-container>
-                                <el-card shadow="always">
+                                <el-card shadow="always" style="background: black">
                                 <el-main>
                                     <el-form ref="form" :model="form" label-width="auto">
 
@@ -186,6 +188,18 @@
 
     .el-form-item {
         margin-left: 0px !important;
+    }
+
+    div.app{
+        width: 100%;
+        height: 1000px;
+        background: black;
+    }
+
+    .line {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
     }
 
 </style>
