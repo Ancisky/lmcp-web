@@ -32,7 +32,7 @@ const request = axios.create({
         // 对 data 进行任意转换处理
         return data;
     }],
-    timeout: 5000
+    timeout: 10000
 })
 
 // 添加请求拦截器

@@ -1,7 +1,7 @@
 <template>
   <div id="centreLeft1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
+    <div class="bg-color-black height100 ">
+      <div class="d-flex pt-2 pl-2 height8">
         <span style="color:#5cd9e8">
           <icon name="chart-bar"></icon>
         </span>
@@ -10,11 +10,11 @@
           <dv-decoration-3 style="width:100px;height:20px; position:relative;top:-3px;" />
         </div>
       </div>
-      <div class="d-flex jc-center">
+      <div class="d-flex jc-center height50" style="margin-bottom: 10%">
         <centreLeft1Chart />
       </div>
       <!-- 4个主要的数据 -->
-      <div class="bottom-data">
+      <div class="bottom-data height32">
         <div class="item-box" v-for="(item,index) in numberData" :key="index">
           <div class="d-flex">
             <span class="coin">￥</span>
@@ -124,11 +124,9 @@ export default {
 <style lang="scss">
 #centreLeft1 {
   padding: 1rem;
-  height: 410px;
-  min-width: 300px;
+  //min-width: 300px;
   border-radius: 5px;
   .bg-color-black {
-    height: 385px;
     border-radius: 10px;
   }
   .text {
@@ -136,8 +134,7 @@ export default {
   }
   .chart-box {
     margin-top: 1rem;
-    width: 170px;
-    height: 170px;
+    width: 90%;
     .active-ring-name {
       padding-top: 10px;
     }

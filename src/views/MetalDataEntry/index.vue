@@ -128,7 +128,7 @@
 
                                     <el-form-item align="center" class="box">
                                          <el-button type="primary" @click="onSubmit">提交</el-button>
-                                         <el-button>取消</el-button>
+                                         <el-button @click="back">返回</el-button>
                                     </el-form-item>
 
                                     </el-form>
