@@ -37,7 +37,7 @@ const routes = [
     name: 'datav',
     component: () => import('@/views/datav/index.vue'),
     meta: {
-      title: 'datav模板'
+      title: '数据大屏'
     }
   },{
     path: '/datav-bc',

@@ -64,7 +64,7 @@ export default {
         .linkDirectionalArrowRelPos(1)
         .linkCurvature(0.25)
         // 连接线上的粒子
-        // .linkDirectionalParticles(5) // 粒子数
+        .linkDirectionalParticles(5) // 粒子数
         .linkDirectionalParticleSpeed(1)
         .linkDirectionalParticleWidth(0.3)
         // 变颜色和透明度
@@ -84,9 +84,9 @@ export default {
         nodes: nodes, links: links
       })
       /*---------------------------------------设置动画--------------------------------------------*/
-      return
-      this.myGraph.d3Force('link').distance(400);  //修改节点连线长度,同d3引擎用法
-      const distance = 500;
+      // return
+      this.myGraph.d3Force('link').distance(200);  //修改节点连线长度,同d3引擎用法
+      const distance = 300;
       let angle = 0;
       setInterval(() => {
         this.myGraph.cameraPosition({

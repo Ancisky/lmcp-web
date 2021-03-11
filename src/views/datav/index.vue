@@ -165,6 +165,9 @@ export default {
 <style lang="scss"  scoped>
 @import "../../assets/scss/index";
 @import "../../assets/scss/common";
+#dv-full-screen-container{
+  overflow-y: scroll;
+}
 .data-monitor{
   margin-top: 50px;
   label{
