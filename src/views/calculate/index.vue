@@ -1,20 +1,22 @@
 <template>
     <div class="a">
         <el-col :span="14" offset="5">
-                <el-row></el-row>
-                <el-row>
-                    <h1 align="center" style="color: white">液态金属性能预测</h1>
-                </el-row>
+            <el-row></el-row>
+            <el-row>
+                <h1 align="center" style="color: white">液态金属性能预测</h1>
+                <dv-decoration-5 class="line" dur="3" style="width:400px;height:30px"/>
+            </el-row>
 
-                <el-row :gutter="20">
-                    <el-card shadow="always" style="background: black">
+            <dv-border-box-12>
+                <div style="background: rgba(0,0,0,0);">
+                    <el-row class="up" :gutter="20">
                         <el-row>
                             <el-col>
-                                <h2 align="center" style="color: white">设置样品成分配比</h2>
+                                <h2 align="center" style="color: white; margin-top: 22px;">设置样品成分配比</h2>
                             </el-col>
                         </el-row>
 
-                        <el-col :span="21">
+                        <el-col :span="20" :offset="1">
                             <el-row :gutter="20">
                                 <el-form ref="form" :model="form" label-width="auto">
                                     <el-col :span="4"><div>
@@ -50,7 +52,7 @@
                                 </el-form>
                             </el-row>
 
-        <!--                    <el-row> </el-row>-->
+                            <!--                    <el-row> </el-row>-->
 
                             <el-row :gutter="20">
                                 <el-col :span="4" :offset="0"><div>
@@ -89,35 +91,42 @@
                         <el-col :span="2">
                             <el-button type="primary" @click="onSubmit" style="width:100px;height: 130px">提交预测</el-button>
                         </el-col>
-                    </el-card>
-                </el-row>
+                    </el-row>
+                </div>
+            </dv-border-box-12>
 
-                <el-row>
-                    <h5 align="center" style="color: white">1.选择制备成分 -> 2.输入组分含量 -> 3.提交预测任务 -> 4.云端返回计算结果 </h5>
-                </el-row>
+            <el-row>
+                <h5 align="center" style="color: white; margin-top: 50px">1.选择制备成分 -> 2.输入组分含量 -> 3.提交预测任务 -> 4.云端返回计算结果 </h5>
+                <dv-decoration-2 class="line"   style="width:420px;height:5px;"/>
+            </el-row>
 
-                <el-row :gutter="20">
-                    <el-card shadow="always" style="background: black">
 
-                        <el-col :span="5">
-                            <el-button type="primary" style="width:100px;height: 220px">属<br>性<br>计<br>算<br>结<br>果</el-button>
+            <dv-border-box-12>
+                <div style="background: rgba(0,0,0,0);padding-bottom: 1px;">
+                    <el-row>
+                        <el-col>
+                            <h2 align="center" style="color: white; margin-top: 22px;">属性计算结果</h2>
                         </el-col>
-
-                        <el-col :span="9" >
+                    </el-row>
+                    <el-row>
+                        <el-col :span="8" offset="3" >
                             <div class="Echarts">
                                 <div id="main" style="width: 300px;height:200px;"></div>
                             </div>
                         </el-col>
 
-                        <el-col :span="10" >
-                            <el-table :show-header="false"
-                                    :data="tableData"
-                                    style="width: 100%">
+                        <el-col :span="8" offset="2" >
+                            <el-table class="b"
+                                      :show-header="false"
+                                      :data="tableData"
+                                      style="color:white; background-color:rgba(0,0,0,0);">
+
                                 <el-table-column
                                         prop="prop"
                                         label="属性"
                                         width="180">
                                 </el-table-column>
+
                                 <el-table-column
                                         prop="name"
                                         label="数值"
@@ -125,16 +134,16 @@
                                 </el-table-column>
                             </el-table>
                         </el-col>
+                    </el-row>
+                </div>
+            </dv-border-box-12>
 
-
-                    </el-card>
-                </el-row>
-
-            </el-col>
+        </el-col>
     </div>
 </template>
 
 <script>
+    // import Charts from '@jiaminghi/charts'
     export default {
         data() {
             return {
@@ -160,6 +169,26 @@
                     c: '-',
                     k: '-',
                 },
+                // option:{
+                //     radar: {
+                //         polygon: true,
+                //         indicator: [
+                //             { name: '西峡', max: 300 },
+                //             { name: '周口', max: 300 },
+                //             { name: '南阳', max: 300 },
+                //             { name: '驻马店', max: 300 },
+                //             { name: '郑州', max: 300 },
+                //             { name: '洛阳', max: 300 }
+                //         ]
+                //     },
+                //     series: [
+                //         {
+                //             type: 'radar',
+                //             data: [111, 256, 178, 152, 266, 132],
+                //             animationCurve: 'easeOutBack'
+                //         }
+                //     ]
+                // },
             }
         },
         computed:{
@@ -187,7 +216,6 @@
         name: 'Echarts',
         methods:{
             myEcharts(){
-
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = this.$echarts.init(document.getElementById('main'));
                 // 指定图表的配置项和数据
@@ -228,6 +256,14 @@
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option);
             },
+
+            // charet() {
+            //     const container = document.getElementById('container')
+            //     const myChart = new Charts(container)
+            //     myChart.setOption(this.option)
+            // },
+
+
             onSubmit() {
                 this.$post("/calculate/entry", this.form).then(function(res){  // {"no":1,"msg":"录入成功！","data":null}
                     console.log(res.data)
@@ -250,10 +286,10 @@
 
         mounted() {
             this.myEcharts();
+            // this.charet();
         }
+
     }
-
-
 </script>
 
 <style>
@@ -265,20 +301,51 @@
         background: rgba(131, 185, 212, 0.87);
     }
 
-    div.a{
-        width: 100%;
-        height: 10000px;
-        background: black;
-    }
-
     .el-row {
         margin-bottom: 50px;
     }
 
-    div.Echarts{
-        position:relative;
-        top:10px
+    div.a{
+        width: 100%;
+        height: 1000px;
+        background: black;
     }
 
+    div.Echarts{
+        position:relative;
+        top:10px;
+    }
+
+    .line {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .el-table tr,
+    .el-table td {
+        background-color: transparent !important;
+    }
+    .el-table::before {
+         height: 0px;
+    }
+
+    .el-row.up{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .el-input-group__append, .el-input-group__prepend{
+        background: #007dff33;
+        color: white;
+        border-color: #272727;
+    }
+
+    .el-input__inner{
+        background: #000000;
+        color: white;
+        border-color: #272727;
+    }
 
 </style>

@@ -63,6 +63,16 @@ const routes = [
       title: '液态金属性能预测'
     }
   },
+
+  {
+    path: '/calculate',
+    name: 'test',
+    component: () => import('@/views/calculate/test.vue'),
+    meta: {
+      title: 'test'
+    }
+  },
+
   {
     path: '/visualization-neo',
     name: 'visualization-neo',

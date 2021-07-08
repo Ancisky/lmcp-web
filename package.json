@@ -13,6 +13,7 @@
   "dependencies": {
     "3d-force-graph": "^1.67.7",
     "@jiaminghi/data-view": "^2.10.0",
+    "@jiaminghi/charts": "^0.2.18",
     "@types/echarts": "^4.9.3",
     "axios": "^0.21.1",
     "core-js": "^3.8.2",
